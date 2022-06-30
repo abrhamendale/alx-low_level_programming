@@ -1,9 +1,19 @@
+/**
+ * main - Entry point
+ *
+ * desciption: print using puts
+ *
+ * Return: Always 0 (Success)
+ */
 #include <stdio.h>
 #include <string.h>
 
 /*
- * Main - Entry point
- * c program
+ * main - Entry point
+ *
+ * description: print using puts
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
