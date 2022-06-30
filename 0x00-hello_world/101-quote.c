@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	fwrite("and that piece of art is useful\" - ", 39, 1, stderr);
-	fwrite("Dora Korpar, 2015-10-19", 39, 1, stderr);
+	fwrite("and that piece of art is useful\" - ", sizeof(char), 1, stderr);
+	fwrite("Dora Korpar, 2015-10-19", sizeof(char), 1, stderr);
 	return (1);
 }
