@@ -11,33 +11,10 @@ int main(void)
 {
 	char H;
 
-	for (H = 0 ; H <= 16 ; H++)
-	{
-	switch (H)
-	{
-	case 10:
-	putchar('a');
-	break;
-	case 11:
-	putchar('b');
-	break;
-	case 12:
-	putchar('c');
-	break;
-	case 13:
-	putchar('d');
-	break;
-	case 14:
-	putchar('e');
-	break;
-	case 15:
-	putchar('f');
-	break;
-	default:
+	for (H = 0 ; H <= 9 ; H++)
 	putchar(H + '0');
-	break;
-	}
-	}
-putchar('\n');
-return (0);
+	for (H = 'a' ; H <= 'f' ; H++)
+	putchar(H);
+	putchar('\n');
+	return (0);
 }
