@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include <unistd.h>
 
 /**
  * putchr - Entry point
@@ -18,8 +19,16 @@ int putchr(void)
 	_putchar(st[i]);
 	i++;
 	}
+	write(1, "\n", 5);
 	return (0);
 }
+/**
+ * main - Entry point
+ *
+ * Description: Main function
+ *
+ * Return: Always 0
+ */
 int main(void)
 {
 	putchr();
