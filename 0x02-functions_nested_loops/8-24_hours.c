@@ -16,10 +16,13 @@ void jack_bauer(void)
 	int j = 0;
 	int k = 0;
 	int l = 0;
+	int t = 10;
 
 	while (i < 3)
 	{
-		while (j < 10)
+		if (i == 2)
+			t = 4;
+		while (j < t)
 		{
 			while (k < 6)
 			{
