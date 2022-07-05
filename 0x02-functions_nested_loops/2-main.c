@@ -12,7 +12,6 @@
  */
 int main(void)
 {
-	print_alphabet();
-	write(1, "\n", 1); 
+	print_alphabet_x10();
 	return (0);
 }
