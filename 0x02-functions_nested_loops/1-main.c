@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <unistd.h>
 #include "main.h"
 
 /**
@@ -11,6 +12,7 @@
  */
 int main(void)
 {
-	putchr();
+	print_alphabet();
+	write(1, "\n", 1);
 	return (0);
 }
