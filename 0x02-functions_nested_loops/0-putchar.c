@@ -19,7 +19,7 @@ int putchr(void)
 	_putchar(st[i]);
 	i++;
 	}
-	write(1, "\n", 5);
+	write(1, "\n", 10);
 	return (0);
 }
 /**
@@ -32,5 +32,6 @@ int putchr(void)
 int main(void)
 {
 	putchr();
+	write(1, "\n", 10);
 	return (0);
 }
