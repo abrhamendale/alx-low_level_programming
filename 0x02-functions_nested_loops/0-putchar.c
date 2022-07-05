@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -9,8 +10,18 @@
  **/
 int putchr(void)
 {
-	char st[]  = "_putchar";
+	char st[8] = "_putchar";
 
-	_putchar(st);
+	int i = 0;
+	while (i < 8)
+	{
+	_putchar(st [i]);
+	i++;
+	}
+	return (0);
+}
+int main(void)
+{
+	putchr();
 	return (0);
 }

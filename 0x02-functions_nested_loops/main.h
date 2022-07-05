@@ -1,4 +1,3 @@
-#ifndef main
-#define main
-int _putchar (char *c);
-#endif
+int _putchar (char);
+int putchr(void);
+int main(void);
