@@ -19,7 +19,7 @@ void jack_bauer(void)
 
 	while (i < 3)
 	{
-		while (j < 4)
+		while (j < 10)
 		{
 			while (k < 6)
 			{
