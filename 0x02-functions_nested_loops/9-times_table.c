@@ -22,7 +22,8 @@ void times_table(void)
 			if ((p / 10) != 0)
 			_putchar(p / 10 + '0');
 			else
-			write(1, " ", 1);
+				if (j != 0)
+				write(1, " ", 1);
 			_putchar((p % 10) + '0');
 			if (j < 9)
 			{
