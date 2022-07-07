@@ -25,7 +25,7 @@ void print_to_98(int n)
 			write(1, "-", 1);
 		}
 		if ((temp/100) != 0)
-			_putchar((temp1/100) + '0');
+			_putchar((temp/100) + '0');
 		if((temp/10) != 0)
 		{
 			temp1 = temp/10;
