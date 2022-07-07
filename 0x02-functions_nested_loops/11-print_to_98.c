@@ -13,26 +13,47 @@
 void print_to_98(int n)
 {
 	int i = n;
-	int temp=n;
+	int temp;
+	int temp1;
 
-	while (i < 99)
+	while (i != 98)
 	{
+		temp = i;
 		if (i < 0)
 		{
 			temp = -1 * i;
 			write(1, "-", 1);
 		}
-		_putchar((temp / 10) + '0');
-		_putchar((temp % 10) + '0');
+		if ((temp/100) != 0)
+			_putchar((temp1/100) + '0');
+		if((temp/10) != 0)
+		{
+			temp1 = temp/10;
+			if ((temp1/10) != 0)
+				_putchar((temp1/10) + '0');
+			_putchar((temp1%10) + '0');
+		}
+		_putchar((temp%10) + '0');
 		if (i < 98)
 		{
-		write(1, ",", 1);
-		write(1, " ", 1);
+			write(1, ",", 1);
+			write(1, " ", 1);
 		}
 		if (n <= 98)
 			i++;
 		else
 			i--;
+		if (i == 98)
+		{
+			_putchar(9 + '0');
+			_putchar(8 + '0');
+		}
+	}
+	if (n == 98)
+	{
+		_putchar(9 + '0');
+		_putchar(8 + '0');
 	}
 	write(1, "\n", 1);
 }
+
