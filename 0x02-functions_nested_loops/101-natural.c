@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
  * naturaln - Entry point
@@ -19,4 +20,16 @@ void naturaln(void)
 		i++;
 	}
 	printf("%d \n", sum);
+}
+/**
+ * main - Entry point
+ *
+ * Description: Main function
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+	naturaln();
+	return (0);
 }
