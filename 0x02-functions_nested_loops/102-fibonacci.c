@@ -11,15 +11,14 @@
 void fibonacci(void)
 {
 	int i = 1;
-	int f1 = 0;
-	int f2 = 1;
-	int f3 = 0;
+	unsigned long int f1 = 0;
+	unsigned long int f2 = 1;
+	unsigned long int f3 = 0;
 
-	printf("1, ");
-	while (i < 50)
+	while (i < 51)
 	{
 		f3 = f1 + f2;
-		printf("%d, ", f3);
+		printf("%lu, ", f3);
 		f1 = f2;
 		f2 = f3;
 		i++;
