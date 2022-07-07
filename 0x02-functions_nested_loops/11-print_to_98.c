@@ -24,19 +24,16 @@ void print_to_98(int n)
 			temp = -1 * i;
 			write(1, "-", 1);
 		}
-		if ((temp/100) != 0)
-			_putchar((temp/100) + '0');
-		if((temp/10) != 0)
+		if ((temp / 10) != 0)
 		{
-			temp1 = temp/10;
-			if ((temp1/10) != 0)
-				_putchar((temp1/10) + '0');
-			_putchar((temp1%10) + '0');
+			temp1 = temp / 10;
+			if ((temp1 / 10) != 0)
+				_putchar((temp1 / 10) + '0');
+			_putchar((temp1 % 10) + '0');
 		}
-		_putchar((temp%10) + '0');
+		_putchar((temp % 10) + '0');
 		if (i < 98)
-		{
-			write(1, ",", 1);
+		{       write(1, ",", 1);
 			write(1, " ", 1);
 		}
 		if (n <= 98)
