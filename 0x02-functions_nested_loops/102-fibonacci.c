@@ -18,7 +18,9 @@ void fibonacci(void)
 	while (i < 51)
 	{
 		f3 = f1 + f2;
-		printf("%lu, ", f3);
+		printf("%lu", f3);
+		if (i != 50)
+			printf(", ");
 		f1 = f2;
 		f2 = f3;
 		i++;
