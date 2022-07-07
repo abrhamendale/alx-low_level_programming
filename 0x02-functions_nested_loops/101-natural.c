@@ -12,11 +12,17 @@
 void naturaln(void)
 {
 	int i = 0;
-	int sum;
+	int sum = 0;
 
-	while ((i * 3) < 1025 && (i * 5) < 1025)
+	while ((i * 3) < 1024)
 	{
-		sum = sum + (i * 3) + (i * 5);
+		sum = sum + (i * 3);
+		i++;
+	}
+	i = 0;
+	while ((i * 5) < 1024)
+	{
+		sum = sum + (i * 5);
 		i++;
 	}
 	printf("%d \n", sum);
