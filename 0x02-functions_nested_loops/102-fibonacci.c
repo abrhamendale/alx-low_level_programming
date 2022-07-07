@@ -20,11 +20,12 @@ void fibonacci(void)
 		f3 = f1 + f2;
 		printf("%lu", f3);
 		if (i != 50)
-			printf(", \n");
+			printf(", ");
 		f1 = f2;
 		f2 = f3;
 		i++;
 	}
+	printf("\n");
 }
 /**
  * main - Entry point
