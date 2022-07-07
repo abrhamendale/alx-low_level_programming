@@ -21,7 +21,7 @@ int print_last_digit(int n)
 	i = (n % 10) + '0';
 	if (n == INT_MIN)
 	{
-		i = 8;
+		i = 8 + '0';
 		r = 8;
 	}
 	write(1, &i, 1);
