@@ -32,7 +32,7 @@ void print_to_98(int n)
 			_putchar((temp1 % 10) + '0');
 		}
 		_putchar((temp % 10) + '0');
-		if (i < 98)
+		if (i != 98)
 		{       write(1, ",", 1);
 			write(1, " ", 1);
 		}
