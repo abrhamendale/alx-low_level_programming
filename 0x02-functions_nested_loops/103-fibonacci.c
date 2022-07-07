@@ -16,20 +16,16 @@ void fibonaccieven(void)
 	int f3 = 0;
 	int sum = 0;
 
-	printf("sum");
-	while (i < 50)
+	while (f3 < 4000000)
 	{
 		f3 = f1 + f2;
-		if (f3 < 4000000)
-		{
-			f1 = f2;
-			f2 = f3;
-			if ((f3 % 2) == 0)
-				sum = sum + f3;
-			printf("%d", sum);
-			i++;
-		}
+		f1 = f2;
+		f2 = f3;
+		if ((f3 % 2) == 0)
+			sum = sum + f3;
+		i++;
 	}
+	printf("%d\n", sum);
 }
 /**
  * main - Entry point
