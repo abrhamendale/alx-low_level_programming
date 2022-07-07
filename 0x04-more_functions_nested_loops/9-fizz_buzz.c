@@ -9,6 +9,19 @@
  */
 int main(void)
 {
+	fizz_buzz();
+	return (0);
+}
+
+/**
+ * fizz_buzz - Entry point
+ *
+ * Description: Print 1 upto 100
+ *
+ * Return: 0
+ */
+void fizz_buzz(void)
+{
 	int i;
 	for (i = 1 ; i <= 100 ; i++)
 	{
@@ -22,5 +35,4 @@ int main(void)
 			printf("%d ", i);
 	}
 	printf("\n");
-	return (0);
 }
