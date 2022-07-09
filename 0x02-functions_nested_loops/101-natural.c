@@ -22,6 +22,7 @@ void naturaln(void)
 	i = 0;
 	while ((i * 5) < 1024)
 	{
+		if ((i * 5) % 3 != 0)
 		sum = sum + (i * 5);
 		i++;
 	}
