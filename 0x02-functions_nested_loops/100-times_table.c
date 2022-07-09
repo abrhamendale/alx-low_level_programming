@@ -2,9 +2,10 @@
 #include <unistd.h>
 
 /**
- * times_table - Entry point
+ * print_times_table - Entry point
  *
  * Description: Prints the time table
+ * @n: times table size
  *
  * Return: 0
  */
