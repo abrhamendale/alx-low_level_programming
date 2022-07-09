@@ -26,7 +26,7 @@ void naturaln(void)
 		sum = sum + (i * 5);
 		i++;
 	}
-	printf("%d \n", sum);
+	printf("%d\n", sum);
 }
 /**
  * main - Entry point
