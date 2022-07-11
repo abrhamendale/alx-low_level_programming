@@ -14,7 +14,7 @@ void puts2(char *s)
 
 	for (i = strlen(s) - 1 ; i >= 0 ; i--)
 	{
-		if (s[strlen(s) - 1 - i] % 2 == 0)
+		if ((strlen(s) - 1 - i) % 2 == 0)
 		putchar (s[strlen(s) - 1 - i]);
 	}
 	putchar ('\n');
