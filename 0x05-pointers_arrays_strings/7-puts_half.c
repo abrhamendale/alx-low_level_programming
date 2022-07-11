@@ -10,9 +10,9 @@
  */
 void puts_half(char *s)
 {
-	long unsigned int i;
+	unsigned long int i;
 
-	for (i = (strlen(s)) / 2 ; i <= strlen(s) - 1 ; i++)
+	for (i = (strlen(s) + 1) / 2 ; i <= strlen(s) - 1 ; i++)
 	{
 		putchar(s[i]);
 	}
