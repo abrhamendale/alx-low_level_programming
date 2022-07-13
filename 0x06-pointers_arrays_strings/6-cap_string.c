@@ -18,11 +18,11 @@ char *cap_string(char *str)
 	{
 		if (str[i] == '\t')
 			str[i] = ' ';
-		if(!isalnum(str[i]))
-		{
-			if (str[i] != '-')
+		if (str[i] == '!' || str[i] == ',' || str[i] == ';' || str[i] == '.'
+				|| str[i] == '?' || str[i] == '"' || str[i] == '('
+				|| str[i] == ')' || str[i] == '{' || str[i] == '}'
+				|| str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
 			str[i + 1] =  toupper(str[i + 1]);
-		}
 	}
 		return (str);
 }
