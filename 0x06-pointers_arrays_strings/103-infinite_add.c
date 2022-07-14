@@ -22,9 +22,9 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	{
 		ldiff = strlen(n1) - strlen(n2);
 		if (strlen(n1) > strlen(n2))
-			r[i] = (int)(n1[i] - '0') + (int)(n2[i - ldiff] - '0') + rem + '0';
+			r[i] = (int)(n1[i] - '0') + (int)(n2[i - ldiff] - '0') + (int)rem + '0';
 		else
-			r[i] = (int)(n1[i - ldiff] - '0') + (int)(n2[i] - '0') + rem + '0';
+			r[i] = (int)(n1[i - ldiff] - '0') + (int)(n2[i] - '0') + (int)rem + '0';
 		if (r[i] > 9)
 		{
 			r[i] = r[i] % 10 + '0';
