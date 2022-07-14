@@ -14,6 +14,7 @@ char *cap_string(char *str)
 	int size;
 
 	size = strlen(str);
+	str[0] = toupper(str[0]);
 	for (i = 0 ; i < size ; i++)
 	{
 		if (i != size - 1)
