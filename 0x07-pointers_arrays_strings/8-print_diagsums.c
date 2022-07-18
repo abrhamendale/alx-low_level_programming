@@ -31,4 +31,6 @@ void print_diagsums(int *a, int size)
 		}
 		printf("%lu\n", sum);
 	}
+	else
+		printf("0, 0\n");
 }
