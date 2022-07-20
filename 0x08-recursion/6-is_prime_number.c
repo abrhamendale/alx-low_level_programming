@@ -27,13 +27,8 @@ int prime(int n, int i)
 {
 	if (n == 1 || (-1 * n) == 1)
 		return (0);
-	if (n < 0)
-	{
-		if ((-1 * n) % i == 0 && (n != i))
-			return (0);
-		else
-			return (1);
-	}
+	if (n < 0 && (-1 * n) % i == 0 && (n != i))
+		return (0);
 	if ((n % i) == 0 && (n != i))
 		return (0);
 	if (i == n)
