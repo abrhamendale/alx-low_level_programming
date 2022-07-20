@@ -4,6 +4,7 @@
  * _puts_recursion - Entry point
  *
  * Description: Prints a string
+ * @s: Input string
  *
  * Return: Nothing
  */
