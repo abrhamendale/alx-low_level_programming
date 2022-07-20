@@ -12,7 +12,6 @@ void _print_rev_recursion(char *s)
 {
 	if (strlen(s) == 0)
 	{
-		_putchar(*s);
 		return;
 	}
 	if (strlen(s) - 1 == 0)
