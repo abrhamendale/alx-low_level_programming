@@ -11,7 +11,7 @@
  */
 void print_diagsums(int *a, int size)
 {
-	unsigned long int sum;
+	long int sum;
 	int i, j;
 
 	sum = 0;
@@ -22,14 +22,14 @@ void print_diagsums(int *a, int size)
 			sum += a[i];
 			i = i + size + 1;
 		}
-		printf("%lu, ", sum);
+		printf("%ld, ", sum);
 		sum = 0;
 		for (j = size - 1 ; j <= (size * size) - size ;)
 		{
 			sum += a[j];
 			j = j + size - 1;
 		}
-		printf("%lu\n", sum);
+		printf("%ld\n", sum);
 	}
 	else
 		printf("0, 0\n");
