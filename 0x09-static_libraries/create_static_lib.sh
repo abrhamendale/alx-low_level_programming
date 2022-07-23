@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c *.c | ar rc liball.a *.o
+gcc -c *.c | find -name ".o" | ar rc liball.a 
