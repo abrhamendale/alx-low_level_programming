@@ -13,7 +13,7 @@ int wildcmp(char *s1, char *s2)
 {
 	int c = 0;
 
-	if (strlen(s1) == 0 && strlen(s2) == 0)
+	if ((strlen(s1) == 0 && strlen(s2) == 0) || (strlen(s1) == 0 && *s2 == '*' && strlen(s2) == 1))
 		return (1);
 	else if (strlen(s1) == 0 && strlen(s2) != 0)
 		return (0);
@@ -50,7 +50,11 @@ int wild(char *s1, char *s2)
 	else if (strlen(s1) == 0 && strlen(s2) == 0)
 		return (1);
 	if (*s1 == *s2)
+	{
+		if (strlen(s1) == strlen(s2) && strlen(s1) == 1)
+			return (1);
 		return (wild(s1 + 1, s2 + 1));
+	}
 	else if (*s2 == '*')
 	{
 		if (strlen(s2) - 1 == 0)
