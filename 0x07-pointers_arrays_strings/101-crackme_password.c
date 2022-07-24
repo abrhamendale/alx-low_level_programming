@@ -11,10 +11,10 @@ int main(void)
 {
 	int i, j;
 	char rn[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char pwd[15];
+	char pwd[6];
 
 	srand(time(NULL));
-	for (i = 0 ; i < 15 ; i++)
+	for (i = 0 ; i < 6 ; i++)
 	{
 		j = rand() % 62;
 		pwd[i] = rn[j];
