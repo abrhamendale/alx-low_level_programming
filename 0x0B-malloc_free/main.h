@@ -28,4 +28,5 @@ int is_palindrome(char *s);
 int palindrome(char *s, unsigned int i);
 int wildcmp(char *s1, char *s2);
 int wild(char *s1, char *s2);
+char *create_array(unsigned int size, char c);
 #endif
