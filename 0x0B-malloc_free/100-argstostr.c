@@ -11,16 +11,17 @@
  */
 char *argstostr(int ac, char **av)
 {
-    char *g;
-    int i, j;
+	char *g;
+	int i;
 
-    if (ac == 0 || av == NULL)
-    return (NULL);
-    for (i = 0; i < ac ; i++)
-    {
-        g = strcat(g, av[i]);
-        if(i != ac - 1)
-            g = strcat(g, "\n");
-    }
-    return (g);
+	if (ac == 0 || av == NULL)
+		return (NULL);
+	for (i = 0; i < ac ; i++)
+	{
+		g = strcat(g, av[i]);
+		printf("%s\n", av[i]);
+		if(i != ac - 1)
+			g = strcat(g, "\n");
+	}
+	return (g);
 }
