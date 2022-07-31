@@ -19,15 +19,15 @@ char *str_concat(char *s1, char *s2)
 	}
 	else if (s1 == NULL && s2 != NULL)
 	{
-		s = malloc(strlen(s2) * sizeof(char));
+		s = malloc((1 + strlen(s2)) * sizeof(char));
 	}
 	else if (s2 == NULL && s1 != NULL)
 	{
-		s = malloc(strlen(s1) * sizeof(char));
+		s = malloc((strlen(s1) + 1)* sizeof(char));
 	}
 	else
 	{
-		s = malloc((strlen(s1) + strlen(s2)) * sizeof(char));
+		s = malloc((strlen(s1) + strlen(s2) + 1) * sizeof(char));
 	}
 	if (s == NULL)
 	{

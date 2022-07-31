@@ -13,7 +13,7 @@ int main(void)
 {
 	char *s;
 
-	s = str_concat("", "Holberton");
+	s = str_concat("", "");
 	if (s == NULL)
 	{
 		printf("failed\n");
