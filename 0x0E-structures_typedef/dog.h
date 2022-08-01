@@ -1,12 +1,20 @@
 #ifndef DOG
 #define DOG
 
+/**
+ * struct dog - Struct
+ * @name: Name of dog
+ * @age: Age of dog
+ * @owner: Owner of dog
+ *
+ * Description: Struct type dog
+ */
 struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-}dog;
+} dog;
 
 typedef struct dog dog_t;
 void init_dog(struct dog *d, char *name, float age, char *owner);
