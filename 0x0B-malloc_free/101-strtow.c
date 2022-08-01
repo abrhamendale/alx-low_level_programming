@@ -29,7 +29,7 @@ char **strtow(char *str)
         }
     }
     printf("%d\n", count_w);
-    c = malloc(sizeof(char *) * count_w);
+    c = malloc(8 * count_w);
     printf("1");
     if (c == NULL)
     {
