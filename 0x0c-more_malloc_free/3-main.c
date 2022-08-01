@@ -12,6 +12,7 @@
  */
 void simple_print_buffer(int *buffer, unsigned int size)
 {
+<<<<<<< HEAD
 	unsigned int i;
 
 	i = 0;
@@ -29,6 +30,25 @@ void simple_print_buffer(int *buffer, unsigned int size)
 		i++;
 	}
 	printf("\n");
+=======
+        unsigned int i;
+
+        i = 0;
+        while (i < size)
+    {
+            if (i % 10)
+            {
+                printf(" ");
+            }
+            if (!(i % 10) && i)
+            {
+                printf("\n");
+            }
+            printf("0x%02x", buffer[i]);
+            i++;
+    }
+        printf("\n");
+>>>>>>> ee1a1538ee1a522f289677df50031bb189082496
 }
 
 /**
@@ -38,6 +58,7 @@ void simple_print_buffer(int *buffer, unsigned int size)
  */
 int main(void)
 {
+<<<<<<< HEAD
 	int *a;
 
 	a = array_range(0, 10);
@@ -45,3 +66,12 @@ int main(void)
 	free(a);
 	return (0);
 }
+=======
+        int *a;
+
+        a = array_range(0, 10);
+        simple_print_buffer(a, 11);
+        free(a);
+        return (0);
+}
+>>>>>>> ee1a1538ee1a522f289677df50031bb189082496

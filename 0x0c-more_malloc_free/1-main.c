@@ -9,6 +9,7 @@
  */
 int main(void)
 {
+<<<<<<< HEAD
 	char *concat;
 
 	concat = string_nconcat("Best ", "School !!!", 6);
@@ -16,3 +17,12 @@ int main(void)
 	free(concat);
 	return (0);
 }
+=======
+        char *concat;
+
+        concat = string_nconcat("Best ", "School !!!", 6);
+        printf("%s\n", concat);
+        free(concat);
+        return (0);
+}
+>>>>>>> ee1a1538ee1a522f289677df50031bb189082496
