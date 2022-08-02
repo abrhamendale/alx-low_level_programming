@@ -26,5 +26,4 @@ void print_dog(struct dog *d)
 	}
 	else
 		exit(1);
-
 }
