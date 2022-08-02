@@ -1,4 +1,4 @@
-#ifndef ABS
-#define ABS
-ABS(x) (x < 0 ? (-1 * x) : x)
+#ifndef ABS_HEADER
+#define ABS_HEADER
+#define ABS(x) ((x) < 0 ? (-1 * (x)) : (x))
 #endif
