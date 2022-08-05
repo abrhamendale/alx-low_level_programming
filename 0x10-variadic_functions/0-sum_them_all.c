@@ -3,7 +3,7 @@
 /**
  * sum_them_all - Sums arguments
  *
- *
+ * @n: Number of variable arguments
  *
  * Return: Sum
  */

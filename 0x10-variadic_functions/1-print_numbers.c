@@ -3,7 +3,8 @@
 /**
  * print_numbers - Sums arguments
  *
- *
+ * @separator: Separating character between numbers
+ * @n: Number of variable arguments
  *
  * Return: Sum
  */
