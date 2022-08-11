@@ -9,21 +9,12 @@
  */
 size_t list_len(const list_t *h)
 {
-	const list_t *tmp;
-	size_t count = 0;
+	int count = 0;
 
-	tmp = h;
-	if (tmp->next == NULL)
+	while (h != 0)
 	{
-		return (0);
-	}
-	else
-	{
-		while (tmp != NULL)
-		{
-			tmp = tmp->next;
-			count++;
-		}
+		h = h->next;
+		count++;
 	}
 	return (count);
 }
