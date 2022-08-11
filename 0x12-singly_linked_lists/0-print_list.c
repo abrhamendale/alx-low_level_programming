@@ -9,18 +9,25 @@
  */
 size_t print_list(const list_t *h)
 {
-    struct list_t *tmp;
+	const list_t *tmp;
+	size_t count = 0;
 
-    tmp = h;
-    if(tmp->next == NULL)
-    {
-        printf(" List is empty.");
-    }
-    else
-    {
-        while(tmp != NULL)
-        {
-            printf(" Data = %d\n", tmp->num);      
-	    tmp = tmp->next;                
+	tmp = h;
+	if (tmp->next == NULL)
+	{
+		printf(" Empty.");
 	}
+	else
+	{
+		while (tmp != NULL)
+		{
+			if (tmp->str == NULL)
+				printf("[0] (nil)\n");
+			else
+				printf("[%i] %s\n", tmp->len, tmp->str);
+			tmp = tmp->next;
+			count++;
+		}
+	}
+	return (count);
 }

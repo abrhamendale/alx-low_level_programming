@@ -9,8 +9,9 @@
  */
 void free_list(list_t *head)
 {
-	list_t * tmp;
-	if(head->next != NULL)
+	struct list_s *tmp;
+
+	while (head != NULL)
 	{
 		tmp = head;
 		head = head->next;

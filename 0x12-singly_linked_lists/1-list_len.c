@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_list - Finds the number of elements of a signly linked list
+ * list_len - Finds the number of elements of a signly linked list
  *
  * @h: Input list
  *
@@ -9,17 +9,17 @@
  */
 size_t list_len(const list_t *h)
 {
-	struct list_t *tmp;
-	size_t count;
+	const list_t *tmp;
+	size_t count = 0;
 
 	tmp = h;
-	if(tmp->next == NULL)
+	if (tmp->next == NULL)
 	{
 		return (0);
 	}
 	else
 	{
-		while(tmp != NULL)
+		while (tmp != NULL)
 		{
 			tmp = tmp->next;
 			count++;
