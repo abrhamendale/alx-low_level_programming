@@ -1,22 +1,23 @@
 #include <stdio.h>
+#include "3-calc.h"
 #include "function_pointers.h"
 
 /**
- * main - check if a number is equal to 98
+ * main - Calculator
  *
  *
  * Return: 0 if false, something else otherwise.
  */
-int main(void)
+int main( int argc, char *argv[] )
 {
-	int array[20] = {0, -98, 98, 402, 1024, 4096, -1024, -98, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 98};
-	int index;
+	int (*p)(int, int);
+	int cal;
 
-	index = int_index(array, 20, is_98);
-	printf("%d\n", index);
-	index = int_index(array, 20, abs_is_98);
-	printf("%d\n", index);
-	index = int_index(array, 20, is_strictly_positive);
-	printf("%d\n", index);
+	if (argc != 0)
+	{
+		p = get_op_func(argv[2]);
+		cal = p(atoi(argv[1]), atoi(argv[3]));
+		printf("%d\n", cal);
+	}
 	return (0);
 }

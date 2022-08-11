@@ -1,4 +1,4 @@
-#include "main.h"
+#include "3-calc.h"
 
 /**
  * op_add - the integer to check
@@ -10,7 +10,7 @@
  */
 int op_add(int a, int b)
 {
-	return (atoi(a) + atoi(b));
+	return (a + b);
 }
 /**
  * op_sub - the integer to check
@@ -21,7 +21,7 @@ int op_add(int a, int b)
  * Return: Difference
  */ 
 int op_sub(int a, int b)                                                        {
-	return (atoi(a) - atoi(b));
+	return (a - b);
 }
 /**                                                                             
  * op_mul - the integer to check
@@ -32,7 +32,7 @@ int op_sub(int a, int b)                                                        
  * Return: Difference
  */    
 int op_mul(int a, int b)                                                        {
-	return (atoi(a) - atoi(b));
+	return (a * b);
 }
 /**
  * op_div - the integer to check
@@ -44,7 +44,7 @@ int op_mul(int a, int b)                                                        
  */
 int op_div(int a, int b)
 {
-	return (atoi(a) / atoi(b));
+	return (a / b);
 }
 /**
  * op_mod - returns the modulus of a number
@@ -56,5 +56,5 @@ int op_div(int a, int b)
  */
 int op_mod(int a, int b)
 {
-	return (atoi(a) / atoi(b));
+	return (a % b);
 }
