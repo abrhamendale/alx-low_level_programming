@@ -9,12 +9,9 @@
  */
 void free_list(list_t *head)
 {
-	struct list_s *tmp;
-
-	while (head != NULL)
-	{
-		tmp = head;
-		head = head->next;
-		free(tmp);
-	}
+	if (head == NULL)
+		return;
+	free_list(head->next);
+	free(head->str);
+	free(head);
 }

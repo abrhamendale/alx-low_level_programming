@@ -13,12 +13,17 @@ list_t *add_node(list_t **head, const char *str)
 	struct list_s *new_node;
 	char *tmp;
 
-	if (strcmp(str, "") == 0)
+	if (str == NULL || head == NULL)
 	{
-		return (0);
+		return (NULL);
 	}
 	tmp = strdup(str);
 	new_node = (struct list_s *) malloc(sizeof(struct list_s));
+	if (new_node == NULL)
+	{
+		free(new_node);
+		return (NULL);
+	}
 	new_node->str = tmp;
 	new_node->len = strlen(tmp);
 	new_node->next = (*head);
