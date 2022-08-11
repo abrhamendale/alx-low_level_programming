@@ -16,6 +16,7 @@ size_t print_list(const list_t *h)
 	if (tmp->next == NULL)
 	{
 		printf(" Empty.");
+		return (0);
 	}
 	else
 	{
