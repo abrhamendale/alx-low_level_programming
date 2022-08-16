@@ -13,14 +13,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	int i = 0;
 	listint_t *tmp, *p;
 
-/*
-    tmp = (listint_t *)malloc(sizeof(listint_t));
-    if (tmp == NULL)
-    {
-        return (0);
-    }
-    tmp->next = NULL;
-    */
 	if (*head == NULL && index != 0)
 	{
 		return (0);
@@ -40,7 +32,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 	if (i == index)
 	{
-		if(i == 0)
+		if (i == 0)
 		{
 			*head = (*head)->next;
 			p->next = NULL;

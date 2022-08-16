@@ -1,4 +1,4 @@
-#include "Lists.h"
+#include "lists.h"
 
 /**
  * add_nodeint_end - Prints all elements of a list
@@ -25,7 +25,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	return (tmp);
 	}
 	p = *head;
-	while(p->next != NULL)
+	while (p->next != NULL)
 	p = p->next;
 	p->next = tmp;
 	return (p);
