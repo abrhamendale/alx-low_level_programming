@@ -1,5 +1,27 @@
-#include "main.h"
+#include "Lists.h"
 
+/**
+ * print_listint - Prints all elements of a list
+ *
+ * @h: List
+ *
+ * Return: Size of the list
+ */
+size_t print_listint(const listint_t *h)
+{
+	size_t count = 0;
+
+	while (h != NULL)
+	{
+		if (h == NULL)
+			printf("[0] (nil)\n");
+		else
+			printf("%d\n", h->n);
+		h = h->next;
+		count++;
+	}
+	return (count);
+}
 /**
  * add_nodeint - Prints all elements of a list
  *
@@ -10,5 +32,40 @@
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-}
+    listint_t *tmp;
 
+    if (head == NULL)
+        return (NULL);
+    tmp = (struct listint_s *)malloc(sizeof(listint_t));
+    if (tmp == NULL)
+	{
+		free(tmp);
+		return (NULL);
+	}
+
+    tmp->n = n;
+    tmp->next = (*head);
+    (*head) = tmp;
+    return (tmp);
+}
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+
+    head = NULL;
+    add_nodeint(&head, 0);
+    add_nodeint(&head, 1);
+    add_nodeint(&head, 2);
+    add_nodeint(&head, 3);
+    add_nodeint(&head, 4);
+    add_nodeint(&head, 98);
+    add_nodeint(&head, 402);
+    add_nodeint(&head, 1024);
+    print_listint(head);
+    return (0);
+}
