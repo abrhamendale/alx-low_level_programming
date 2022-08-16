@@ -1,4 +1,4 @@
-#include "Lists.h"
+#include "lists.h"
 
 /**
  * sum_listint - Prints all elements of a list

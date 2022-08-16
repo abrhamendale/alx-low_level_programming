@@ -1,4 +1,4 @@
-#include "Lists.h"
+#include "lists.h"
 
 /**
  * get_nodeint_at_index - Prints all elements of a list
@@ -10,7 +10,7 @@
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	int i = 0;
+	unsigned int i = 0;
 	listint_t *tmp;
 
 	if (head == NULL)

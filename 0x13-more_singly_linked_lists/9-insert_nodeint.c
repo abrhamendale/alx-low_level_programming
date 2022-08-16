@@ -1,4 +1,4 @@
-#include "Lists.h"
+#include "lists.h"
 
 /**
  * insert_nodeint_at_index - Prints all elements of a list
@@ -12,7 +12,7 @@
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	int i = 0;
+	unsigned int i = 0;
 	listint_t *tmp, *p;
 
 	tmp = (listint_t *)malloc(sizeof(listint_t));
@@ -39,4 +39,5 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		tmp->next = p->next;
 		p->next = tmp;
 	}
+	return (tmp);
 }

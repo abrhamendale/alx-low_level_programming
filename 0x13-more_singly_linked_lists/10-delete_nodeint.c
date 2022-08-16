@@ -1,4 +1,4 @@
-#include "Lists.h"
+#include "lists.h"
 
 /**
  * delete_nodeint_at_index - Prints all elements of a list
@@ -10,7 +10,7 @@
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	int i = 0;
+	unsigned int i = 0;
 	listint_t *tmp, *p;
 
 	if (*head == NULL && index != 0)
@@ -36,13 +36,14 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		{
 			*head = (*head)->next;
 			p->next = NULL;
-			p->n = 0;
+			free(p);
+			return (1);
 		}
 		else
 		{
 			tmp->next = p->next;
 			p->next = NULL;
-			p->n = 0;
+			free(p);
 			return (1);
 		}
 	}
