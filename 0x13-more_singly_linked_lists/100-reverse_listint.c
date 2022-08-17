@@ -3,7 +3,7 @@
 /**
  * reverse_listint - Prints all elements of a list
  *
- * @h: Head of the list
+ * @head: Head of the list
  *
  * Return: Head of the list
  */
