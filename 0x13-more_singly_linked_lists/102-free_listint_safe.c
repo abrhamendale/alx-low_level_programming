@@ -9,19 +9,21 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-	listint_t *p1 = NULL;
-	int count = 0;
+	size_t count = 0;
+	listint_t *p1, *p2;
 
-	if (h == NULL)
+	if (!h)
 		return (0);
-	while (*h != NULL)
+	p1 = *h;
+	*h = NULL;
+	while (p1)
 	{
-		if ((*h)->next > *h)
-			return (0);
-		p1 = *h;
-		*h = (*h)->next;
-		free(p1);
 		count++;
+		p2 = p1;
+		free(p2);
+		if (p1->next >= p1)
+			break;
+		p1 = p1->next;
 	}
 	return (count);
 }
