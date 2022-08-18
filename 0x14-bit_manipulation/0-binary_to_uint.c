@@ -9,14 +9,15 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i, ie = 0, m = 1;
-
-	for (i = strlen(b) - 1 ; i ; i--)
+	unsigned int ie = 0, m = 1;
+	int k = (int)strlen(b), i;
+	
+	for (i = k - 1 ; i >= 0 ; i--)
 	{
 		if ((unsigned int)b[i] < 48 || (unsigned int)b[i] > 58)
 			return (0);
-		if (i == strlen(b) - 1)
-			ie = ie + (unsigned int)b[strlen(b) - 1] - 48;
+		if (i == k - 1)
+			ie = ie + (unsigned int)b[k - 1] - 48;
 		else
 		{
 			m = m * 2;

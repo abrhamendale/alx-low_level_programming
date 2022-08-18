@@ -18,14 +18,13 @@ void print_binary(unsigned long int n)
 		binry = n >> c;
 		if (binry & 1)
 		{
-			printf("1");
+			_putchar('1');
 			z = 1;
 		}
 		else
 		{
 			if (z == 1)
-				printf("0");
+				_putchar('0');
 		}
 	}
-	printf("\n");
 }
