@@ -9,21 +9,21 @@
  */
 void print_binary(unsigned long int n)
 {
-	int c, binry, z = 0;
+	int i, k;
 
 	if (n == 0)
-		_putchar("0");
-	for (c = 31 ; c >= 0 ; c--)
+		_putchar('0');
+	for (k = 0, i = sizeof(n) * 8 - 1; i >= 0; i--)
 	{
-		binry = n >> c;
-		if (binry & 1)
+		if ((n >> i) & 1)
 		{
-			_putchar('1');
-			z = 1;
+			k = 1;
 		}
-		else
+		if (k == 1)
 		{
-			if (z == 1)
+			if ((n >> i) & 1)
+				_putchar('1');
+			else
 				_putchar('0');
 		}
 	}
