@@ -5,7 +5,7 @@
  *
  * @b: Binary input
  *
- * Returns: Unsigned equivalent
+ * Return: Unsigned equivalent
  */
 unsigned int binary_to_uint(const char *b)
 {

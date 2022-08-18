@@ -6,7 +6,7 @@
  * @n: Integer input
  * @index: Index of the input number
  *
- * Returns: 1 if SUCCESS
+ * Return: 1 if SUCCESS
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
@@ -25,7 +25,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 		if (i == index)
 			break;
 	}
-	for (i = 0 ; i <=index ; i++)
+	for (i = 0 ; i <= index ; i++)
 	{
 		if (i == 0)
 			m = 1;

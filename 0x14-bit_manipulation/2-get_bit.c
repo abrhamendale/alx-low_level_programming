@@ -6,7 +6,7 @@
  * @n: Binary input
  * @index: Index of the input number
  *
- * Returns: Bit
+ * Return: Bit
  */
 int get_bit(unsigned long int n, unsigned int index)
 {

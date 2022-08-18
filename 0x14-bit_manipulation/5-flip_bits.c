@@ -6,12 +6,12 @@
  * @n: Input number
  * @m: Input number
  *
- * Returns: The number of bits that need to be flipped
+ * Return: The number of bits that need to be flipped
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	int c, b1, b2, z = 0;
-	
+
 	for (c = 31 ; c >= 0 ; c--)
 	{
 		b1 = n >> c;
