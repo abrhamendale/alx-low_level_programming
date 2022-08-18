@@ -10,4 +10,17 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
+	int c, b1, b2, z = 0;
+	
+	for (c = 31 ; c >= 0 ; c--)
+	{
+		b1 = n >> c;
+		b2 = m >> c;
+
+		if ((b1 & 1) != (b2 & 1))
+		{
+			z++;
+		}
+	}
+	return (z);
 }
