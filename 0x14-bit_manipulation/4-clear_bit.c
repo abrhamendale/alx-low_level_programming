@@ -10,8 +10,8 @@
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int r, q = *n, m = 1;
-	int i, k = 1, count = 0;
+	unsigned long int i, r, q = *n, m = 1;
+	int k = 1, count = 0;
 
 	for (i = 0 ; q > 0 ; i++)
 	{
