@@ -5,6 +5,9 @@
 /**
  * main - check the code
  *
+ * @ac: Number of arguments
+ * @av: Vector of arguments
+ *
  * Return: Always 0.
  */
 int main(int ac, char **av)
