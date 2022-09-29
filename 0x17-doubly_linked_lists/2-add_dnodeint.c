@@ -13,12 +13,18 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	dlistint_t *parse;
 
 	parse = malloc(sizeof(dlistint_t));
-	if (head == NULL)
-		return (NULL);
+	if (*head == NULL)
+	{
+		parse->n = n;
+		parse->next = NULL;
+		parse->prev = NULL;
+		*head = parse;
+		return (parse);
+	}
 	parse->n = n;
 	parse->next = *head;
 	parse->prev = NULL;
-	/*parse->next->prev = parse;*/
+	parse->next->prev = parse;
 	*head = parse;
 	parse = (*head)->next;
 	/*printf("%d\n", parse->prev->n);*/
