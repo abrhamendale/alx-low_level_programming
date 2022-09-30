@@ -17,7 +17,6 @@ int sum_dlistint(dlistint_t *head)
 		return (0);
 	while (parse != NULL)
 	{
-		printf("%d", parse->n);
 		sum += parse->n;
 		parse = parse->next;
 	}
