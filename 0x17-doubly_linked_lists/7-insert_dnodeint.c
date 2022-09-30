@@ -39,7 +39,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 				*h = ins;
 			return (ins);
 		}
-		if (parse->next == NULL && idx == i)
+		if (parse->next == NULL && idx == i + 1)
 		{
 			ins->prev = parse;
 			ins->next = NULL;
