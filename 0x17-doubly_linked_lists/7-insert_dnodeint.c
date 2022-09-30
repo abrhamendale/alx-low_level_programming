@@ -33,9 +33,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			ins->n = n;
 			ins->prev = parse->prev;
 			ins->next = parse;
-			parse->prev->next = ins;
+			if (parse->prev != NULL)
+				parse->prev->next = ins;
 			parse->prev = ins;
-			return (ins);
+			*h = ins;
+			return (*h);
 		}
 		i++;
 		if (parse->next == NULL && idx == i)
