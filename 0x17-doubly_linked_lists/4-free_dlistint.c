@@ -12,6 +12,8 @@ void free_dlistint(dlistint_t *head)
 	dlistint_t *p1, *p2;
 
 	p1 = p2 = head;
+	if (head->next == NULL)
+		free(head);
 	while (p1->next != NULL)
 	{
 		p2 = p1;
