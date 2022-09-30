@@ -13,6 +13,8 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	dlistint_t *parse;
 
 	parse = malloc(sizeof(dlistint_t));
+	if (parse == NULL)
+		return (NULL);
 	if (*head == NULL)
 	{
 		parse->n = n;
