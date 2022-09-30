@@ -70,7 +70,14 @@ int main(void)
 	size_t n;
 
 	head = _create_dlist(2, -12, 6);
-	node = insert_dnodeint_at_index(&head, 1, 98);
+	node = insert_dnodeint_at_index(&head, 0, 98);
+	if (node)
+		printf("-> %d\n", node->n);
+	else
+		printf("(nil)\n");
+	n = print_dlistint(head);
+	printf("-> %lu elements\n", n);
+	node = insert_dnodeint_at_index(&head, 1, 99);
 	if (node)
 		printf("-> %d\n", node->n);
 	else
