@@ -27,7 +27,11 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 					parse->next->prev = parse->prev;
 			}
 			else
+			{
 				*head = parse->next;
+				if (parse->next != NULL)
+					parse->next->prev = NULL;
+			}
 			free(parse);
 			return (1);
 		}
