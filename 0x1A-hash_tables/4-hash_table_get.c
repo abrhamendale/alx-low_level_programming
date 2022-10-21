@@ -10,22 +10,22 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	hash_node_t *parser1, *parser2;
+	hash_node_t *parser1;
 	unsigned long int index = 0, counter = 0;
 
 	printf("hash_table_get-----------------\n");
 	index = key_index((const unsigned char *)key, 1024);
-	parser1 = parser2 = *(ht->array);
+	parser1 = *(ht->array);
 	if (key == NULL || ht == NULL)
 		return (NULL);
-	printf("Index:%lu\n", index);
+	/*printf("Index:%lu\n", index);*/
 	while (counter <= index && parser1 != NULL)
-	{printf("22222\n");
+	{/*printf("Counter:%lu\n", counter);*/
 		if (counter == index)
 		{
-			printf("---Key:%s ---Value:%s\n", key, parser1->value);
+			/*printf("---Key:%s ---Value:%s\n", key, parser1->value);*/
 			return (parser1->value);
-			printf("Index:%lu\n", counter);
+			/*printf("Index:%lu Counter:%lu\n", index, counter);*/
 		}
 		parser1 = parser1->next;
 		counter++;
