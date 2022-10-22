@@ -10,15 +10,16 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *first;
-	hash_node_t *head, *parser;
-	unsigned int counter = 0;
+	/*hash_node_t *head, *parser;
+	unsigned int counter = 0;*/
 
 	printf("hash_table_create--------\n");
 	first = malloc(sizeof(hash_table_t));
-	head = NULL;
+	first->array = malloc(sizeof(hash_node_t **) * size);
+	/*head = NULL;
 	if (head == NULL)
 	{
-		head = malloc(sizeof(hash_node_t));
+		head = malloc(sizeof(hash_node_t) * size);
 		head->next = NULL;
 		counter++;
 	}
@@ -29,7 +30,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 		head = parser;
 		counter++;
 	}
-	first->array = &head;
+	first->array = &head;*/
 	return (first);
 }
 
