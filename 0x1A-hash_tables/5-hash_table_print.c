@@ -12,24 +12,31 @@ void hash_table_print(const hash_table_t *ht)
 	hash_node_t *parser;
 	unsigned long int counter = 0, print = 0;
 
-	parser = (ht->array)[counter];
-	if (ht->array == NULL)
-		printf("{}\n");
-	printf("{");
-	while (ht != NULL && counter < 1024)
-	{/*printf("%lu\n", counter);*/
+	if (ht != NULL)
+	{
 		parser = (ht->array)[counter];
-		if (parser != NULL)
-		{
-			if (parser->key != NULL && print == 1)
-				printf(", ");
-			if (parser->key != NULL && parser->value != NULL)
+		if (ht->array == NULL)
+			printf("{}\n");
+		printf("{");
+		while (ht != NULL && counter < ht->size)
+		{/*printf("%lu\n", counter);*/
+			parser = (ht->array)[counter];
+			if (parser != NULL)
 			{
-				printf("'%s': '%s'", parser->key, parser->value);
-				print = 1;
+				if (parser->key != NULL && print == 1)
+					printf(", ");
+				if (parser->key != NULL && parser->value != NULL)
+				{
+					while (parser != NULL)
+					{
+						printf("'%s': '%s'", parser->key, parser->value);
+						print = 1;
+						parser = parser->next;
+					}
+				}
 			}
+			counter++;
 		}
-		counter++;
+		printf("}\n");
 	}
-	printf("}\n");
 }
