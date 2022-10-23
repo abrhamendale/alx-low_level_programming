@@ -13,9 +13,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *parser, *top;
 	unsigned long int index = 0;
-	char v[128];
 
-	strcpy(v, value);
 	if (ht == NULL || key == NULL)
 		return (0);
 	index = key_index((const unsigned char *)key, ht->size);
@@ -24,13 +22,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (top->key == key)
 		{
-			top->value = (char *)v;
+			top->value = (char *)value;
 			return (1);
 		}
 		parser = malloc(sizeof(hash_node_t));
 		if (parser == NULL)
 			return (0);
-		parser->value = (char *)v;
+		parser->value = (char *)value;
 		parser->key = (char *)key;
 		parser->next = top;
 		top = (ht->array)[index] = parser;
@@ -41,7 +39,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (top == NULL)
 			return (0);
 		top->key = (char *)key;
-		top->value = (char *)v;
+		top->value = (char *)value;
 		top->next = NULL;
 	}
 	return (1);
