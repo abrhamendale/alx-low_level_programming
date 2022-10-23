@@ -23,16 +23,17 @@ void hash_table_print(const hash_table_t *ht)
 			parser = (ht->array)[counter];
 			if (parser != NULL)
 			{
-				if (parser->key != NULL && print == 1)
-					printf(", ");
 				if (parser->key != NULL && parser->value != NULL)
 				{
 					while (parser != NULL)
 					{
+						if (parser->key != NULL && print == 1)
+							printf(", ");
 						printf("'%s': '%s'", parser->key, parser->value);
 						print = 1;
 						parser = parser->next;
 					}
+					print = 1;
 				}
 			}
 			counter++;
