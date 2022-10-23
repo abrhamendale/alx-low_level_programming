@@ -15,9 +15,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index = 0;
 
 	/*printf("hash_table_set-----------------\n");*/
-	index = key_index((const unsigned char *)key, ht->size);
 	if (ht == NULL || key == NULL)
 		return (0);
+	index = key_index((const unsigned char *)key, ht->size);
 	top = (ht->array)[index];
 	if (top != NULL)
 	{

@@ -13,7 +13,9 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	hash_node_t *parser;
 	unsigned long int index = 0, counter = 0;
 
-	index = key_index((const unsigned char *)key, 1024);
+	if (key == NULL || ht == NULL)
+		return (NULL);
+	index = key_index((const unsigned char *)key, ht->size);
 	parser = (ht->array)[0];
 	while (parser == NULL)
 	{
@@ -21,9 +23,15 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		counter++;
 	}
 	parser = (ht->array)[index];
-	if (key == NULL || ht == NULL)
-		return (NULL);
 	if (parser == NULL)
 		return (NULL);
-	return (parser->value);
+	if (parser->key == key)
+		return (parser->value);
+	while (parser)
+	{
+		if (parser->key == key)
+			return (parser->value);
+		parser = parser->next;
+	}
+	return (NULL);
 }

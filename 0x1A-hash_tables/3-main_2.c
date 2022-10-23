@@ -65,6 +65,8 @@ int main(void)
 	printf("%d\n", ret);
 	ret = hash_table_set(ht, "Australia", "Canberra");
 	printf("%d\n", ret);
+	ret = hash_table_set(NULL, "Australia", "Canberra");
+	printf("%d\n", ret);
 	_hash_table_print(ht);
 	return (EXIT_SUCCESS);
 }
