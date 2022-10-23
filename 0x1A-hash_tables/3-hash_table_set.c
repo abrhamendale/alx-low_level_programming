@@ -11,24 +11,32 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *parser1;
-	unsigned long int index = 0, counter = 0;
+	hash_node_t *parser, *top;
+	unsigned long int index = 0;
 
-	printf("hash_table_set-----------------\n");
+	/*printf("hash_table_set-----------------\n");*/
 	index = key_index((const unsigned char *)key, 1024);
-	parser1 = *(ht->array);
 	if (key == NULL)
 		return (0);
-	while (counter <= index && parser1 != NULL)
+	top = (ht->array)[index];
+	if (top != NULL)
 	{
-		if (counter == index)
-		{
-			parser1->value = (char *)value;
-			parser1->key = (char *)key;
-			return (1);
-		}
-		parser1 = parser1->next;
-		counter++;
+		/*printf("\nKey:%s Index:%lu Value:%s\n", key, index, top->value);*/
+		parser = malloc(sizeof(hash_node_t));
+		parser->value = (char*)value;
+		parser->key = (char *)key;
+		parser->next = top;
+		top = (ht->array)[index] = parser;
 	}
+	else
+	{
+		top = (ht->array)[index] = malloc(sizeof(hash_node_t));
+		if (top == NULL)
+			return (0);
+		top->key = (char *)key;
+		top->value = (char *)value;
+		top->next = NULL;
+	}
+	/*printf("Key:%s Value:%s Index:%lu\n", ((ht->array)[index])->key, top->value, index);*/
 	return (1);
 }
