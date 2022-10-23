@@ -23,7 +23,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		/*printf("\nKey:%s Index:%lu Value:%s\n", key, index, top->value);*/
 		parser = malloc(sizeof(hash_node_t));
-		parser->value = (char*)value;
+		parser->value = (char *)value;
 		parser->key = (char *)key;
 		parser->next = top;
 		top = (ht->array)[index] = parser;
@@ -37,6 +37,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		top->value = (char *)value;
 		top->next = NULL;
 	}
-	/*printf("Key:%s Value:%s Index:%lu\n", ((ht->array)[index])->key, top->value, index);*/
 	return (1);
 }

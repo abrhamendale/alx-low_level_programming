@@ -37,6 +37,6 @@ int main(void)
 	value = hash_table_get(ht, "c");
 	printf("%s:%s\n", "c", value);
 	value = hash_table_get(ht, "javascript");
-    	printf("%s:%s\n", "javascript", value);
+	printf("%s:%s\n", "javascript", value);
 	return (EXIT_SUCCESS);
 }
