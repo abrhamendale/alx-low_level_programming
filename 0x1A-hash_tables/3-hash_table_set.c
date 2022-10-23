@@ -15,14 +15,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index = 0;
 
 	/*printf("hash_table_set-----------------\n");*/
-	index = key_index((const unsigned char *)key, 1024);
-	if (key == NULL)
+	index = key_index((const unsigned char *)key, ht->size);
+	if (ht == NULL || key == NULL)
 		return (0);
 	top = (ht->array)[index];
 	if (top != NULL)
 	{
 		/*printf("\nKey:%s Index:%lu Value:%s\n", key, index, top->value);*/
 		parser = malloc(sizeof(hash_node_t));
+		if (parser == NULL)
+			return (0);
 		parser->value = (char *)value;
 		parser->key = (char *)key;
 		parser->next = top;
