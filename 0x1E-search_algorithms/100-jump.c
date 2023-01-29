@@ -1,57 +1,37 @@
 #include "search_algos.h"
 
 /**
- * min - Calculates the minimum value
+ * jump_search - Calculates the minimum value
  *
- * @a: Input a
- * @b: Input b
- *
- * Return: The smallest one
- */
-int min(int a, int b)
-{
-	if(b>a)
-		return a;
-	else
-		return b;
-}
-/**
- * jumpsearch - Calculates the minimum value
- *
- * @arr: Input array
- * @x: Input b
+ * @array: Input array
+ * @size: Input b
+ * @value: The value to search
  *
  * Return: The smallest one
  */
-int jump_search(int *array, size_t size, int value);
-int jumpsearch(int arr[], int x, int n)
+int jump_search(int *array, size_t size, int value)
 {
-	// Finding block size to be jumped
-size_t
-	int n = value, step = sqrt(n);
+	size_t i = 0, jump = sqrt(size);
 
-	// Finding the block where element is
-	// present (if it is present)
-	int prev = 0;
-	while (arr[min(step, n)-1] < x)
+	if (array == NULL)
+		return (-1);
+
+	while (i < size && array[i] < value)
 	{
-		prev = step;
-		step += sqrt(n);
-		if (prev >= n)
-			return -1;
+		printf("Value checked array[%lu] = [%d]\n", i, array[i]);
+		i += jump;
 	}
-	// Doing a linear search for x in block
-	// beginning with prev.
-	while (arr[prev] < x)
+
+	jump = i - jump;
+	printf("Value found between indexes [%lu] and [%lu]\n", jump, i);
+	if (i >= size)
+		i = size - 1;
+	while (jump <= i)
 	{
-		prev++;
-	// If we reached next block or end of
-	// array, element is not present.
-		if (prev == min(step, n))
-			return -1;
+		printf("Value checked array[%lu] = [%d]\n", jump, array[jump]);
+		if (array[j] == value)
+			return (jump);
+		jump++;
 	}
-	// If element is found
-	if (arr[prev] == x)
-		return prev;
-	return -1;
+	return (-1);
 }
