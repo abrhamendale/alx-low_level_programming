@@ -11,37 +11,12 @@
  */
 int binary_search(int *array, size_t size, int value)
 {
-	size_t i = 0, r = size - 1, l = 0, m = r / 2;
 	int ret = 0;
 
-	if (array == NULL || size == 0)
-		return (-1);
-	printf("Searching in array: -%lu %lu %lu-\n", l, m, r);
-	for (i = l ; i <= r ; i++)
-	{
-		printf("%d", array[i]);
-		if (i != r)
-			printf(", ");
-	}
-	printf("\n");
-	if (array[m] == value)
-		return (m);
-	else if (value > array[m])
-	{
-		printf("right\n");
-		l = m + 1;
-		ret = bin(array, l, r, value);
+	ret = bin(array, -1, size, value);
+	if (ret > 0)
 		return (ret);
-	}
-	else if (value < array[m])
-	{
-		printf("left\n");
-		r = m - 1;
-		ret = bin(array, l, r, value);
-		return (ret);
-	}
-	else
-		return (-1);
+	return (-1);
 }
 /**
  * bin - Helper function for binary search
@@ -55,32 +30,28 @@ int binary_search(int *array, size_t size, int value)
  */
 int bin(int *array, size_t l, size_t r, int value)
 {
-	size_t i = 0, m = ((r - l + 1) / 2) + l;
+	size_t i = 0, m = (r + l) / 2;
 	int ret = 0;
-	
-	if (array == NULL || r == 0)
+
+	if (l + 1 == r)
 		return (-1);
-	printf("Searching in array: -%lu %lu %lu-\n", l, m, r);
-	for (i = l ; i <= r ; i++)
+	printf("Searching in array: ");
+	for (i = l + 1 ; i < r ; i++)
 	{
 		printf("%d", array[i]);
-		if (i != r)
+		if (i + 1 < r)
 			printf(", ");
 	}
 	printf("\n");
 	if (array[m] == value)
 		return (m);
-	else if (value > array[m])
+	if (value > array[m])
 	{
-		printf("right\n");
-		l = m + 1;
-		ret = bin(array, l, r, value);
+		ret = bin(array, m, r, value);
 	}
-	else if (value < array[m])
+	else
 	{
-		printf("left\n");
-		r = m - 1;
-		ret = bin(array, l, r, value);
+		ret = bin(array, l, m, value);
 	}
 	return (ret);
 }
