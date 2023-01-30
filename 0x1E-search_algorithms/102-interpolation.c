@@ -2,7 +2,7 @@
 
 /**
  * interpolation_search - Implements an interpolation search algorithm
- * 
+ *
  * @array: Input array
  * @size: The size of the array
  * @value: value to match element
